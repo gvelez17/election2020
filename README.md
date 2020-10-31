@@ -35,6 +35,9 @@ Also has single page with links to PDF per county with per-precinct data
 ex: https://www.michigan.gov/sos/0,4670,7-127-1633_8722-486915--,00.html
 search by precinct: https://miboecfr.nictusa.com/cgi-bin/cfr/precinct_srch.cgi
 
+## FL
+Has precinct level election results easily downloadable
+https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/
 
 
 ## Voter Registration & Participation Data Sources
