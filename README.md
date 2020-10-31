@@ -10,7 +10,17 @@ Sections:
 - duplicate voter registrations - did we get duplicate votes?
 - ratio between party members voting / votes for party candidate by precinct
 
-## Data Sources
+## Election Results Data Sources
+
+Is there a central source for precinct level data?
+
+### PA
+https://www.electionreturns.pa.gov/ReportCenter/Reports. - breakdown by County
+To get precinct level results, it may be necessary to look at the county websites
+http://www.buckscounty.org/docs/default-source/boe/2020generalprimarycertifiedelectionresultsbypercinct.pdf?sfvrsn=64d90fef_0
+
+
+## Voter Registration & Participation Data Sources
 
 (search for 'voter participation database' or 'voter registration database' + state )
 General info: https://www.ncsl.org/research/elections-and-campaigns/access-to-and-use-of-voter-registration-lists.aspx
@@ -47,6 +57,7 @@ https://www.sos.state.co.us/pubs/elections/forms/dataRequests.pdf
 
 ### GA
 https://sos.ga.gov/index.php/elections/order_voter_registration_lists_and_files
+(whole state costs $250; has last election voted, not clear when this is updated - phone 844.753.7825)
 
 ### MN
 https://www.sos.state.mn.us/election-administration-campaigns/data-maps/registered-voter-list-requests/
