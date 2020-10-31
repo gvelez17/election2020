@@ -14,7 +14,8 @@ So, we want both election results by precinct and voter participation by party a
 
 ## Election Results Data Sources
 
-Is there a central source for precinct level data? No - answered from FL election project.
+Is there a central source for precinct level data? FL election project answered - no
+There is one for 2016 data, https://dataverse.harvard.edu/dataverse/medsl_president, but not clear how long it will take for 2020
 
 ### PA
 https://www.electionreturns.pa.gov/ReportCenter/Reports. - breakdown by County
