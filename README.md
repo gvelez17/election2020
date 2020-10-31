@@ -10,14 +10,31 @@ Sections:
 - duplicate voter registrations - did we get duplicate votes?
 - ratio between party members voting / votes for party candidate by precinct
 
+So, we want both election results by precinct and voter participation by party and precinct.  See sources below.
+
 ## Election Results Data Sources
 
-Is there a central source for precinct level data?
+Is there a central source for precinct level data? No - answered from FL election project.
 
 ### PA
 https://www.electionreturns.pa.gov/ReportCenter/Reports. - breakdown by County
 To get precinct level results, it may be necessary to look at the county websites
 http://www.buckscounty.org/docs/default-source/boe/2020generalprimarycertifiedelectionresultsbypercinct.pdf?sfvrsn=64d90fef_0
+
+### GA
+https://sos.ga.gov/index.php/Elections/current_and_past_elections_results will have links
+ex: https://results.enr.clarityelections.com/GA/DeKalb/105081/web.259135/#/reporting?v=260887%2F
+can download XLS from each county with precinct breakdowns
+
+### MI
+Michigan may allow single download of all precinct data!
+ie https://miboecfr.nictusa.com/cfr/presults/2018GEN.zip
+https://miboecfr.nictusa.com/cgi-bin/cfr/precinct_srch.cgi?elect_year_type=2018GEN&county_code=00&Submit=Search
+
+Also has single page with links to PDF per county with per-precinct data
+ex: https://www.michigan.gov/sos/0,4670,7-127-1633_8722-486915--,00.html
+search by precinct: https://miboecfr.nictusa.com/cgi-bin/cfr/precinct_srch.cgi
+
 
 
 ## Voter Registration & Participation Data Sources
