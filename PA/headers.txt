@@ -1,0 +1,1 @@
+voter_ID_number,name,sex,date_of_birth,date_registered,status,date_status_last_changed,party,residential_address,mailing_address,polling_place,date_last_voted,all_districts_in_which_the_voter_votes,voter_history,last_changed
