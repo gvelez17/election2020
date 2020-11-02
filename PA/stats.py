@@ -10,8 +10,6 @@ DATA_DIR = '/edata/PA'
 
 HEADER_FILE = '/edata/PA/headers.txt'
 
-sample = ['/edata/PA/WESTMORELAND FVE 20201019.txt',]
-
 with open(HEADER_FILE, 'r') as file:
     headers = file.read().split(',')
 
@@ -39,7 +37,7 @@ for filename in os.listdir(DATA_DIR):
 
         # drop rows with invalid precinct codes
         af = af[~af.precinct_code.astype('str').str.contains('/')]
-        af['precinct_code'] = af.precinct_code.astype('int64')
+        af['precinct_code'] = af.precinct_code.astype('str')
         af['precinct_tot'] = af.precinct_tot.astype('int64')
   except Exception as e:
     print("ERROR: {}".format(str(e)))
