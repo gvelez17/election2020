@@ -13,8 +13,11 @@ HEADER_FILE = '/edata/PA/headers.txt'
 with open(HEADER_FILE, 'r') as file:
     headers = file.read().split(',')
 
+af = pd.DataFrame()
 for filename in os.listdir(DATA_DIR):
     if re.search('FVE', filename):
         df = pd.read_csv("{}/{}".format(DATA_DIR, filename), names=headers, sep='\t')
-        import pdb; pdb.set_trace()
+        af = af.append(df[df.duplicated(['first_name', 'last_name','middle_name','suffix', 'dob','house_number', 'street_name', 'city'], keep=False)].sort_values(['last_name','first_name','suffix','house_number','street_name'])[['voter_ID_number','last_name','first_name','middle_name','suffix','dob','date_registered','house_number','street_name','city','party']])
+
+import pdb; pdb.set_trace()
 
