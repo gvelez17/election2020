@@ -76,7 +76,8 @@ Tallahassee, FL  32399-0250
 ```
 ### PA
 https://www.pavoterservices.pa.gov/pages/purchasepafullvoterexport.aspx
-(we have the full download from Oct 25; ask in discord)
+
+(we have the full download from Nov 3; ask in discord - on the server at /edata/PA)
 
 ### WI
 https://elections.wi.gov/clerks/svrs/voter-data
