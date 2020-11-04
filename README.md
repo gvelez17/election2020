@@ -16,7 +16,10 @@ So, we want both election results by precinct and voter participation by party a
 
 There is no single nationwide source for precinct level data.  It is available from some states, and for those that do not make it available at the state level, in particular FL, TX, NY, PA, UT, MI, MO, CA, OH, http://openelections.net will be working on collating and making the data available from  to download.
 
+https://github.com/MEDSL/election_night2020 is also working on making precinct level data downloadable.
+
 For 2016 data, there is full precinct level data for comparison: https://dataverse.harvard.edu/dataverse/medsl_president 
+We have this loaded on the server at /edata/2016_by_precinct.tab
 
 https://electionlab.mit.edu/data#tools has a good list of general sources
 
