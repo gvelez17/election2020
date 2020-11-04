@@ -100,6 +100,8 @@ https://dl.ncsbe.gov/index.html?prefix=data/Snapshots/
 seems to be free, but not updated too often
 also Voter History Data - https://www.ncsbe.gov/results-data/voter-history-data
 
+Raw files: https://dl.ncsbe.gov/?prefix=data/
+
 ### SC
 https://info.scvotes.sc.gov/eng/saleabledata/home.aspx
 (must be a South Carolina voter)
