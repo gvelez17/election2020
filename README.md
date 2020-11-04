@@ -40,6 +40,7 @@ can download XLS from each county with precinct breakdowns
 ### NC
 https://dl.ncsbe.gov/
 https://dl.ncsbe.gov/?prefix=ENRS/2020_11_03/
+/edata/NC/results_pct_20201103.txt
 
 ### MI
 Michigan may allow single download of all precinct data!
