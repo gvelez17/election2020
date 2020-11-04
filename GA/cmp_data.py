@@ -25,7 +25,7 @@ import pandas as pd
 import os
 import re
 
-DATA_DIR = '/edata/GA'
+DATA_DIR = '/edata/GA' # '/pres'  # can also look at /edata/GA/sen
 
 col_map = { 
             'County': 'precinct',
@@ -53,6 +53,7 @@ for filename in os.listdir(DATA_DIR):
         df = df.rename(col_map, axis=1) 
         df['d_ratio'] = df['d_total']/df['voters']
         df['r_ratio'] = df['r_total']/df['voters']
+        df['turnout'] = (df['d_total'] + df['r_total'] + df['l_total'])/df['voters']
         import pdb; pdb.set_trace()
 
 
