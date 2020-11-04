@@ -37,6 +37,10 @@ https://sos.ga.gov/index.php/Elections/current_and_past_elections_results will h
 ex: https://results.enr.clarityelections.com/GA/DeKalb/105081/web.259135/#/reporting?v=260887%2F
 can download XLS from each county with precinct breakdowns
 
+### NC
+https://dl.ncsbe.gov/
+https://dl.ncsbe.gov/?prefix=ENRS/2020_11_03/
+
 ### MI
 Michigan may allow single download of all precinct data!
 ie https://miboecfr.nictusa.com/cfr/presults/2018GEN.zip
