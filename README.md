@@ -55,6 +55,9 @@ search by precinct: https://miboecfr.nictusa.com/cgi-bin/cfr/precinct_srch.cgi
 Has precinct level election results easily downloadable
 https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/
 
+## WI
+Open elections
+https://drive.google.com/drive/u/0/folders/1G0FzHidvRzzjSalm1teRtczCdLKUCuOC - PDFs
 
 ## Voter Registration & Participation Data Sources
 
