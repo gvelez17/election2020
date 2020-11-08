@@ -8,7 +8,7 @@ import os
 import re
 
 RESULTS_FILE = '/edata/NC/results_pct_20201103.txt'
-TURNOUT_FILE = '/edata/NC/turnout/ncvhis_Statewide.txt'
+TURNOUT_FILE = '/edata/NC/ncvhis_Statewide.txt'
 
 df = pd.read_csv(RESULTS_FILE, sep='\t')
 
