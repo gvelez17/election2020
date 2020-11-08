@@ -24,14 +24,22 @@ pf[pf['Choice'] == 'Joseph R. Biden']['Total Votes']
 tf = pd.read_csv(TURNOUT_FILE, sep='\t')
 
 # democratic turnout by precinct
-# this is wrong:
-dp = tf[tf.voted_party_cd == 'DEM'].groupby('pct_label')['voter_reg_num'].count()
+dp = tf[(tf.voted_party_cd == 'DEM') & (tf.election_lbl == '03/03/2020')].groupby('pct_label')['voter_reg_num'].count()
+
+rp = tf[(tf.voted_party_cd == 'DEM') & (tf.election_lbl == '03/03/2020')].groupby('pct_label')['voter_reg_num'].count()
 
 # democratic results by precinct
 dr = pf[pf['Choice'] == 'Joseph R. Biden'][['Precinct','Total Votes']]
 
+# republican results by precinct
+rr = pf[pf['Choice'] == 'Donald J. Trump'][['Precinct', 'Total Votes']]
+
 # lets compare
-mr = pd.merge(dp, dr, how='outer', left_on='pct_label', right_on='Precinct')
+md = pd.merge(dp, dr, how='outer', left_on='pct_label', right_on='Precinct')
+md['ratio'] = mr['Total Votes']/mr['voter_reg_num']
+
+mr = pd.merge(rp, rr, how='outer', left_on='pct_label', right_on='Precinct')
+mr['ratio'] = mr['Total Votes']/mr['voter_reg_num']
 
 import pdb; pdb.set_trace()
 
