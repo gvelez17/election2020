@@ -55,6 +55,10 @@ search by precinct: https://miboecfr.nictusa.com/cgi-bin/cfr/precinct_srch.cgi
 Has precinct level election results easily downloadable
 https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/
 
+## TX
+For voter election day turnout and registration data, must request from counties: https://www.sos.state.tx.us/elections/voter/county.shtml
+early turnout is available on the website https://earlyvoting.texas-election.com/Elections/getElectionEVDates.do
+
 ## WI
 Open elections
 https://drive.google.com/drive/u/0/folders/1G0FzHidvRzzjSalm1teRtczCdLKUCuOC - PDFs
