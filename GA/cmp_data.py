@@ -25,7 +25,8 @@ import pandas as pd
 import os
 import re
 
-DATA_DIR = '/edata/GA' # '/pres'  # can also look at /edata/GA/sen
+
+DATA_DIR = '/edata/GA/pres' # '/pres'  # can also look at /edata/GA/sen
 
 col_map = { 
             'County': 'precinct',
@@ -48,12 +49,23 @@ col_map = {
           }
 
 for filename in os.listdir(DATA_DIR):
-    if re.search(r'clean\.txt$', filename):
+    if re.search(r'\.txt$', filename):
         df = pd.read_csv("{}/{}".format(DATA_DIR, filename), sep='\t')
         df = df.rename(col_map, axis=1) 
-        df['d_ratio'] = df['d_total']/df['voters']
-        df['r_ratio'] = df['r_total']/df['voters']
-        df['turnout'] = (df['d_total'] + df['r_total'] + df['l_total'])/df['voters']
-        import pdb; pdb.set_trace()
+        try:
+            df['d_ratio'] = df['d_total']/df['voters']
+            df['r_ratio'] = df['r_total']/df['voters']
+            df['turnout'] = (df['d_total'] + df['r_total'] + df['l_total'])/df['voters']
+        except:
+            print("exception in {}".format(filename))
+            continue
+
+        min_turnout = df.turnout.min()
+        if min_turnout > 0 and min_turnout < .3:
+            print("Low turnout of {} in {}".format(min_turnout, filename))
+            print(df[df.turnout == min_turnout].precinct)
+            import pdb; pdb.set_trace()
+        #histoplot(df, 'turnout')
+
 
 

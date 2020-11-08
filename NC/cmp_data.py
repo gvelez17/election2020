@@ -8,6 +8,7 @@ import os
 import re
 
 RESULTS_FILE = '/edata/NC/results_pct_20201103.txt'
+TURNOUT_FILE = '/edata/NC/turnout/ncvhis_Statewide.txt'
 
 df = pd.read_csv(RESULTS_FILE, sep='\t')
 
@@ -20,7 +21,19 @@ pf[pf['Choice'] == 'Donald J. Trump']['Total Votes']
 pf[pf['Choice'] == 'Joseph R. Biden']['Total Votes']
 
 
-# we don't have the turnout data from 2020
+tf = pd.read_csv(TURNOUT_FILE, sep='\t')
+
+# democratic turnout by precinct
+# this is wrong:
+dp = tf[tf.voted_party_cd == 'DEM'].groupby('pct_label')['voter_reg_num'].count()
+
+# democratic results by precinct
+dr = pf[pf['Choice'] == 'Joseph R. Biden'][['Precinct','Total Votes']]
+
+# lets compare
+mr = pd.merge(dp, dr, how='outer', left_on='pct_label', right_on='Precinct')
+
+import pdb; pdb.set_trace()
 
 # Try comparing with the governor's race
 mf = pf.merge(gf, on=['County','Precinct'], how='outer')
@@ -33,7 +46,4 @@ mf_reps['ratio'] = mf_reps['Total Votes_x']/mf_reps['Total Votes_y']
 
 import pdb; pdb.set_trace()
 
-# we do have older turnout data 
-OLD_REG_FILE = '/edata/NC/ncvhis_Statewide.txt'
-rf = pd.read_csv(OLD_REG_FILE, sep='\t')
 
