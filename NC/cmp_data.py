@@ -26,6 +26,7 @@ tf = pd.read_csv(TURNOUT_FILE, sep='\t')
 # democratic turnout by precinct
 dp = tf[(tf.voted_party_cd == 'DEM') & (tf.election_lbl == '03/03/2020')].groupby('pct_label')['voter_reg_num'].count()
 
+#should be 'REP'?
 rp = tf[(tf.voted_party_cd == 'DEM') & (tf.election_lbl == '03/03/2020')].groupby('pct_label')['voter_reg_num'].count()
 
 # democratic results by precinct
