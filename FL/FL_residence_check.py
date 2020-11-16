@@ -20,9 +20,10 @@ def query(df, cut_length, filters = dict()):
 print('Loading data')
 with open('/edata2/FL/full_data.pkl', 'rb') as f:
     full_data=pickle.load(f)
-    
+
 print('grouping')
-by_res = full_data.drop_duplicates('Voter ID', keep='last').groupby(['Residence Address Line 1', 'Residence Address Line 2', 'Mailing City', 'County Code', 'Residence Zipcode', 'Party Affiliation']).count().sort_values('Voter ID', ascending=False)['Voter ID']
+grouping_list=['Residence Address Line 1', 'Residence Address Line 2', 'Mailing City', 'County Code', 'Residence Zipcode', 'Party Affiliation']
+by_res = full_data.drop_duplicates('Voter ID', keep='last').groupby(grouping_list).count().sort_values('Voter ID', ascending=False)['Voter ID']
 
 by_res = pd.DataFrame(by_res)
 by_res.columns = ['count']
