@@ -26,7 +26,7 @@ import os
 import re
 
 
-DATA_DIR = '/edata/GA/pres' # '/pres'  # can also look at /edata/GA/sen
+DATA_DIR = '/edata/KY/pres' # '/pres'  # can also look at /edata/GA/sen
 
 col_map = { 
             'County': 'precinct',
@@ -64,7 +64,7 @@ for filename in os.listdir(DATA_DIR):
         if min_turnout > 0 and min_turnout < .3:
             print("Low turnout of {} in {}".format(min_turnout, filename))
             print(df[df.turnout == min_turnout].precinct)
-            import pdb; pdb.set_trace()
+            #import pdb; pdb.set_trace()
         #histoplot(df, 'turnout')
 
 

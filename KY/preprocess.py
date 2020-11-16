@@ -51,7 +51,7 @@ for filename in os.listdir(RAW_DIR):
 
                     # confirm the rep is first then the dem, then lib
                     if not re.search('.*Rep.*Dem.*Lib', races):
-                        raise("Unexpected candidate order: {}".format(filename))
+                        print("Unexpected candidate order: {}".format(filename))
 
                     # replace more than one space with a tab
                     header = re.sub(r'  +', '\t', header) 
