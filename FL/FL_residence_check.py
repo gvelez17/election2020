@@ -9,7 +9,7 @@ def query(df, cut_length, filters = dict()):
     """
     filters should be dict ex: {column_name: value}
     """
-    df = df[df['Residence Address Line 1'] != '*']
+    #df = df[df['Residence Address Line 1'] != '*']
     filename = './residence_queries/by_res'
     for key, value in filters.items():
         filename += '_' + key + ': ' + value + '_'
@@ -31,7 +31,7 @@ by_res = by_res.reset_index()
 
 print('running queries')
 print('general')
-query(by_res, 200)
-for i in county_queries:
-    print('County query: '+ i)
-    query(by_res, 20, {'County Code': i})
+query(by_res, 500)
+#for i in county_queries:
+#    print('County query: '+ i)
+#    query(by_res, 20, {'County Code': i})
